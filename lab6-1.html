@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>INT106: Lab6 JavaScript </title>
+<!-- JavaScript Lab by (61130500030- Nattaphon Chaisiriwattanakul) -->
+<meta charset='utf-8'>
+<!-- insert 6.1a code below this comment -->
+<script>
+ownername = 'Nattaphon Chaisiriwattanakul';
+thisyear = 2019;
+author = 'Nattaphon Chaisiriwattanakul';
+today = new Date().toString();
+pict1URL = 'https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2019/04/Screen-Shot-2019-04-25-at-12.49.44-PM.jpeg?resize=2500%2C0&quality=82&strip=all&ssl=1'
+pict2URL = 'https://i2.wp.com/9to5mac.com/wp-content/uploads/sites/6/2019/04/TodayatMiro.jpg?resize=2500%2C0&quality=82&strip=all&ssl=1'
+function rollOverP1 () {
+document.getElementById('pict1').src=pict2URL;
+}
+function rollOverP2 () {
+document.getElementById('pict1').src=pict1URL;
+}
+function afterPageLoadFinished(){
+    window.alert('Welcome to Lab 6: JavaScript.')
+}
+function askToGoWatch() {
+if (window.confirm('See Official Apple Watch page?')) {
+location.href='http://www.apple.com/watch/';
+//window.open ('http://www.apple.com/watch/');
+}
+else window.alert('We will not open Official Apple Watch Page.')
+}
+title2 = "INT106: Lab6's last step ";
+function changeTitle (toBeTitle) {
+window.setTimeout (function(){
+document.title=toBeTitle;
+}, 3000)
+}
+</script>
+
+</head>
+<!-- 6.6 insert onload event into body tag -->  
+<body onload='afterPageLoadFinished()'>
+<!-- Add event 6.4 into below h1 tag -->
+
+<h1 onMouseOver="alert('Dont’ Touch Me!')" >My JavaScript Lab</h1>
+<h2><span onClick=askToGoWatch()>Apple Watch</span>
+<p>lost at sea returns to owner in working condition after 6 months</p></h2>
+<p>
+<!-- insert code 6.2 after this comment --> 
+    <script>
+        document.write(author + " - " + today);
+    </script>
+
+</p>
+<p><!-- Lab 6.5b --><img id='pict1' onmouseover="rollOverP1()" onmouseout="rollOverP2()" src='https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2019/04/Screen-Shot-2019-04-25-at-12.49.44-PM.jpeg?resize=2500%2C0&quality=82&strip=all&ssl=1' style='width:400;height:auto'>
+<p>A man who lost his Apple Watch while body surfing in Huntington Beach, California had a nice surprise this week. Robert Bainter originally lost his Apple Watch six months ago, but this month it made its way back to him – in working condition.</p>
+<p>As detailed by local news outlet KTLA, Bainter lost his Apple Watch while surfing in Huntington Beach late last year. He describes the Apple Watch as his “good luck charm” when surfing as it can show him detailed information about his location. After a big wave, however, the Apple Watch fell of his arm:</p>
+<p>“This thing has been my good luck charm. I would use it quite often to show the surf and how fast you were going. It would even show you where you were on the beach,” said Bainter.</p>
+
+<p>Until “a huge wave came and you know I was loving it, rode it and then I pick up my arm and like ‘Oh My God,’ what just happened.”</p>
+<!-- insert lab 6.1b code below this comment -->
+<script>
+    document.write("<hr>Copyright&copy; "+ thisyear+" by "+ ownername );
+</script>
+
+<p> <!-- Insert tag 6.3 below this comment -->
+<button onclick='alert("Hello")'>
+    Hello
+</button>
+<!-- insert tag 6.8 below -->
+<button onclick='window.print()'>Print</button>
+<!-- insert tag 6.9 below -->
+<button onclick='changeTitle(title2)'>Change Title after 3 seconds</button>
+</p>
+</body>
+</html>
